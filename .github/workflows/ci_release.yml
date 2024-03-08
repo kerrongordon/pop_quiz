@@ -48,7 +48,7 @@ jobs:
       - run: flutter build appbundle --release
       - run: flutter build apk --release
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
           name: pop_quiz.${{ steps.get_version.outputs.VERSION }}
